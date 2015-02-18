@@ -1,5 +1,5 @@
 === Better User Search ===
-Contributors: dale3h, blackbam
+Contributors: dale3h
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E8UETG65PQJC2
 Tags: user, search, user search, admin, backend
 Requires at least: 3.0
