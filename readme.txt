@@ -1,5 +1,5 @@
 === Better User Search ===
-Contributors: blackbam
+Contributors: dale3h, blackbam
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E8UETG65PQJC2
 Tags: user, search, user search, admin, backend
 Requires at least: 3.0
@@ -21,9 +21,8 @@ On top of that, there is an "OR" feature provided. Just include the word "or" (c
 and the plugin will search for any user that matches at least 1 of the search terms.
 
 "OR" Search Example:
-Let's find all WooCommerce customers in Texas or Florida. To do this, first make sure that `billing_state` and
-`shipping_state` are setup in the Better User Search settings. Now head to the Users page and type "TX or FL"
-into the search field.
+Let's find all WooCommerce customers in Texas or Florida. To do this, first make sure that `billing_state` and `shipping_state`
+are setup in the Better User Search settings. Now head to the Users page and type "TX or FL" into the search field.
 
 It really is that simple!
 
