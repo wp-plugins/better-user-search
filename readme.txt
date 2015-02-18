@@ -34,7 +34,7 @@ It really is that simple!
 
 == Other notes ==
 
-Special characters like quotes are escaped, problems with the query may apper when trying to search for other non-alphanumeric characters.
+Special characters like quotes are escaped, problems with the query may appear when trying to search for other non-alphanumeric characters.
 
 == Frequently Asked Questions ==
 
