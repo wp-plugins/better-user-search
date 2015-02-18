@@ -1,10 +1,13 @@
 <?php
 /**
  * Plugin Name: Better User Search
+ * Plugin URI: https://wordpress.org/plugins/better-user-search/
  * Description: Improves the search for users in the backend significantly: Search for first name, last, email and more of users instead of only nicename.
  * Version: 1.0
  * Author: Dale Higgs
  * Author URI: mailto:dale3h@gmail.com
+ * Requires at least: 3.0
+ * Tested up to: 4.1
  *
  * This plugin is based on David Stöckl's Improved User Search in Backend plugin.
  * Although it has been completely rewritten, this notice is here to provide
