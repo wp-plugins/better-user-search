@@ -3,7 +3,7 @@
  * Plugin Name: Better User Search
  * Plugin URI: https://wordpress.org/plugins/better-user-search/
  * Description: Improves the search for users in the backend significantly: Search for first name, last, email and more of users instead of only nicename.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Dale Higgs
  * Author URI: mailto:dale3h@gmail.com
  * Requires at least: 3.0
@@ -29,7 +29,7 @@ if ( ! class_exists( 'Better_User_Search' ) ) {
 	// This is where the magic happens!
 	class Better_User_Search {
 		// Plugin version
-		public static $version = '1.0';
+		public static $version = '1.0.1';
 
 		// Instance of the class
 		protected static $instance;
@@ -160,6 +160,9 @@ if ( ! class_exists( 'Better_User_Search' ) ) {
 				// Note the min count is 1 if we found OR in the terms
 				$values[] = ( $search_with_or !== false ? 1 : count( $values ) );
 
+				// Compare values using utf8_general_ci
+				$collate = ' COLLATE utf8_general_ci';
+
 				// Query for matching users
 				$user_ids = $wpdb->get_col( $sql = $wpdb->prepare( "
 					SELECT user_id
@@ -171,13 +174,13 @@ if ( ! class_exists( 'Better_User_Search' ) ) {
 						WHERE (
 							(@term := '%s') IS NOT NULL
 							AND FIND_IN_SET(um.meta_key, @meta_keys)
-							AND LOWER(um.meta_value) LIKE @term
+							AND LOWER(um.meta_value) LIKE @term{$collate}
 						)
-						OR LOWER(u.user_login) LIKE @term
-						OR LOWER(u.user_nicename) LIKE @term
-						OR LOWER(u.user_email) LIKE @term
-						OR LOWER(u.user_url) LIKE @term
-						OR LOWER(u.display_name) LIKE @term
+						OR LOWER(u.user_login) LIKE @term{$collate}
+						OR LOWER(u.user_nicename) LIKE @term{$collate}
+						OR LOWER(u.user_email) LIKE @term{$collate}
+						OR LOWER(u.user_url) LIKE @term{$collate}
+						OR LOWER(u.display_name) LIKE @term{$collate}
 					" ) ) . ") AS user_search_union
 					GROUP BY user_id
 					HAVING COUNT(*) >= %d;

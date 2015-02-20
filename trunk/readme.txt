@@ -1,18 +1,21 @@
 === Better User Search ===
 Contributors: dale3h
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E8UETG65PQJC2
-Tags: user, search, user search, admin, backend
+Tags: user, users, search, admin, backend, woocommerce, customers, meta
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Improves the search for users in the admin significantly: Search for first name, last, email and more of users instead of only nicename.
+Improves the search for users in the admin significantly: Search for first name, last, email and much more of users instead of only nicename.
 
 == Description ==
 
-This plugin is used to improve the user search functionality in the admin/backend.
+Better User Search is a must have plugin if you're running WooCommerce. Without it, you're stuck trying to remember every
+customer's username.
+
+Better User Search is used to improve the user search functionality in the admin/backend.
 
 WordPress by default only allows you to search for users by username/nicename. Using Better User Search, you will be able
 to search by first name, last name, email address and any custom user meta field that already exists in the user meta table.
@@ -28,18 +31,17 @@ It really is that simple!
 
 == Installation ==
 
-1. Upload the `better-user-search` folder to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Visit 'Settings > User Search' and adjust your configuration.
+1. Upload the **better-user-search** folder to the **/wp-content/plugins/** directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Visit 'Settings > User Search' and adjust your configuration.
 
-== Other notes ==
+== Other Notes ==
 
-Special characters like quotes are escaped, problems with the query may apper when trying to search for other non-alphanumeric characters.
+Special characters like quotes are escaped, problems with the query may appear when trying to search for other non-alphanumeric characters.
 
 == Frequently Asked Questions ==
 
 = What is the answer to life, the universe and everything? =
-
 42
 
 == Screenshots ==
@@ -48,6 +50,9 @@ Special characters like quotes are escaped, problems with the query may apper wh
 2. Users page
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix: MySQL error when wp_users and wp_usermeta tables had mismatched collations
 
 = 1.0 =
 * Just getting started...
